@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfg>
+  <Gateway CommListenPort="10001" CommAdminPort="10002">
+      <communicator CommListenPort="10001" CommAdminPort="10002"/>
+      <router id="router" path="./modules/hfs_simple_router.so" select="TEST|" />
+      <accounts>
+          <account id="ZXXX_F" path="./modules/cats_adaptor.so"  adaptor_type="REDIS" 
+            redisIp="192.168.1.16" redisPort="6379" order_key="CATS_REDIS_ORD_FIX" ins_key="CATS_REDIS_INS_FIX" 
+             />
+      </accounts>
+  </Gateway>
+</cfg>
